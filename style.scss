@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Sonsie+One&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +23,6 @@ nav{
             height: 2px;
             background: #000;
             margin: 5px 0;
-            
         }
     }
     .activeNavbar{
@@ -32,12 +31,15 @@ nav{
         display: none;
     }
     p{
-        font-weight: 500;
-        font-size: 1.5rem;
+        font-weight: 300;
+        font-size: 1.2rem;
         position: absolute;
         transform: translate(-50%,-50%);
         top: 50%;
         left: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.671);
+        user-select: none; 
+        padding: 0 0.1em;
     }
 }
 
@@ -281,6 +283,51 @@ nav{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background: antiquewhite;
+    position: relative;
+    :nth-child(1){
+        width: 100%;
+        filter: grayscale(1);
+    }
+    h1{
+        position: absolute;
+        color: rgb(243, 201, 208);
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        font-size: 3rem;
+        font-weight: 500;
+        backdrop-filter: blur(3px);
+        background: rgba(0, 0, 0, 0.582);
+        font-family: 'Montserrat', sans-serif;
+        
+        @media screen and (max-width:800px){
+            font-size: 2.5rem;
+        }
+        @media screen and (max-width:668px){
+            font-size: 2rem;
+        }
+        @media screen and (max-width:668px){
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width:400px){
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.section3{
+    width: 100%;
     height: 100vh;
-    background: rgb(155, 71, 2);
+}
+.section4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(./images/pirosmani_36.webp);
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+    background-attachment: fixed;
 }

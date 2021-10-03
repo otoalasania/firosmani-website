@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Sonsie+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -42,13 +43,19 @@ nav .activeNavbar {
 }
 
 nav p {
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.2rem;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.671);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0 0.1em;
 }
 
 .nav-links {
@@ -486,7 +493,76 @@ nav p {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  background: antiquewhite;
+  position: relative;
+}
+
+.section2 :nth-child(1) {
+  width: 100%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.section2 h1 {
+  position: absolute;
+  color: #f3c9d0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  font-weight: 500;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.582);
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .section2 h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .section2 h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .section2 h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section2 h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.section3 {
+  width: 100%;
   height: 100vh;
-  background: #9b4702;
+}
+
+.section4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-image: url(./images/pirosmani_36.webp);
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  background-attachment: fixed;
 }
 /*# sourceMappingURL=style.css.map */
