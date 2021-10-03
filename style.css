@@ -35,22 +35,6 @@ nav .navbar > div {
   margin: 5px 0;
 }
 
-nav .navbar:hover .bar-1 {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  margin-top: 6px;
-}
-
-nav .navbar:hover .bar-2 {
-  display: none;
-}
-
-nav .navbar:hover .bar-3 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  margin-top: -6px;
-}
-
 nav .activeNavbar {
   position: absolute;
   right: 3%;
@@ -153,7 +137,7 @@ nav p {
     margin-left: 0%;
   }
   .nav-links li:nth-child(1) {
-    border-top: 1px solid rgba(0, 0, 0, 0.705);
+    border-top: 1px solid rgba(0, 0, 0, 0.459);
   }
   .nav-links a {
     width: 100%;
@@ -170,7 +154,7 @@ nav p {
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 1.2rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.705);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.459);
   }
   nav .navbar {
     display: block;

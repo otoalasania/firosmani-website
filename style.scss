@@ -25,19 +25,6 @@ nav{
             margin: 5px 0;
             
         }
-        &:hover{
-            .bar-1{
-                transform: rotate(45deg);
-                margin-top: 6px;
-            }
-            .bar-2{
-                display: none;
-            }
-            .bar-3{
-                transform: rotate(-45deg);
-                margin-top: -6px;
-            }
-        }
     }
     .activeNavbar{
         position: absolute;
@@ -121,7 +108,7 @@ nav{
             margin: 0.02em 0;
         }
         li:nth-child(1){
-            border-top: 1px solid rgba(0, 0, 0, 0.705);
+            border-top: 1px solid rgba(0, 0, 0, 0.459);
         }
         a{
             width: 100%;
@@ -132,7 +119,7 @@ nav{
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.705);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.459);
         }
         
     }
