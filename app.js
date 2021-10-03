@@ -19,4 +19,11 @@ window.addEventListener("scroll", function (event) {
         hat.style.top = "";
         rightArm.style.top = "";
     }
-})
+});
+
+const navBar = document.getElementById("navBar");
+const closeBtn = document.getElementById("closeBtn");
+
+navBar.addEventListener('click', () => {
+    document.querySelector(".nav-links").classList.toggle("activeNav");
+});
