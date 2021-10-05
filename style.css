@@ -606,7 +606,7 @@ nav p {
   }
 }
 
-.photoTypes {
+.about .photoTypes {
   width: 100%;
   height: 4em;
   display: -webkit-box;
@@ -619,12 +619,12 @@ nav p {
 }
 
 @media screen and (max-width: 450px) {
-  .photoTypes {
+  .about .photoTypes {
     height: 3.5em;
   }
 }
 
-.photoTypes .type {
+.about .photoTypes .type {
   width: 15%;
   height: 100%;
   position: relative;
@@ -641,18 +641,18 @@ nav p {
 }
 
 @media screen and (max-width: 650px) {
-  .photoTypes .type {
+  .about .photoTypes .type {
     width: 20%;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .photoTypes .type {
+  .about .photoTypes .type {
     width: 25%;
   }
 }
 
-.photoTypes .type .underType {
+.about .photoTypes .type .underType {
   background: #b3b3b3;
   width: 100%;
   height: 5%;
@@ -660,38 +660,65 @@ nav p {
   bottom: 0;
 }
 
-.photoTypes .type:active .underType {
-  background: #363636;
-}
-
-.photoTypes .type p {
+.about .photoTypes .type p {
   font-size: 0.8rem;
   font-weight: 500;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 450px) {
-  .photoTypes .type p {
+  .about .photoTypes .type p {
     font-size: 0.7rem;
   }
 }
 
-.photos {
-  width: 100%;
-  background: cornflowerblue;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1em 3em;
-  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  -webkit-column-gap: 3.5em;
-          column-gap: 3.5em;
-  row-gap: 2em;
+.about .photoTypes .active {
+  background: #e4e4e4;
 }
 
-.photos img {
+.about .photoTypes .active .underType {
+  background: #353535;
+}
+
+.about .photoTypes .active p {
+  font-weight: 600;
+}
+
+.about .photos {
+  width: 100%;
+  padding: 1em 3em;
+}
+
+.about .photos .content {
+  display: none;
+}
+
+.about .photos .content img {
   max-width: 18em;
+  margin: 1em;
+}
+
+.about .photos .content-2 img {
+  max-width: 40em;
+}
+
+.about .photos .content-3 img {
+  max-width: 30em;
+}
+
+.about .photos .content-4 img {
+  max-width: 30em;
+}
+
+.about .photos .active {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=style.css.map */
