@@ -438,22 +438,22 @@ nav{
                         transform: none;
                     }
                 }
+            }
+            .content-2 img{
+                max-width: 40em;
+            }
+            .content-3 img{
+                max-width: 30em;
+            }
+            .content-4 img{
+                max-width: 22em;
+            }
+            .active{
+                display: block;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
         }
-        .content-2 img{
-            max-width: 40em;
-        }
-        .content-3 img{
-            max-width: 30em;
-        }
-        .content-4 img{
-            max-width: 22em;
-        }
-        .active{
-            display: block;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-    
-    }
+    } 
 }

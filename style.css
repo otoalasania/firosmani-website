@@ -704,27 +704,26 @@ nav p {
           transform: scale(1.03);
 }
 
-.about .photos .content img::after {
-  content: "Click to zoom";
-  left: 0;
-  top: 0;
-  width: 50%;
-  position: absolute;
+@media screen and (max-width: 768px) {
+  .about .photos .content img:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
-.about .photos .content-2 img {
+.about .photos .content .content-2 img {
   max-width: 40em;
 }
 
-.about .photos .content-3 img {
+.about .photos .content .content-3 img {
   max-width: 30em;
 }
 
-.about .photos .content-4 img {
+.about .photos .content .content-4 img {
   max-width: 22em;
 }
 
-.about .photos .active {
+.about .photos .content .active {
   display: block;
   display: -webkit-box;
   display: -ms-flexbox;
