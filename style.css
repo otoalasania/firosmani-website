@@ -687,10 +687,11 @@ nav p {
 .about .photos {
   width: 100%;
   padding: 1em 3em;
+  background: red;
 }
 
 .about .photos .content {
-  display: none;
+  display: block;
 }
 
 .about .photos .content img {
@@ -709,6 +710,10 @@ nav p {
     -webkit-transform: none;
             transform: none;
   }
+}
+
+.about .photos .content .content-1 img {
+  max-width: 40em;
 }
 
 .about .photos .content .content-2 img {

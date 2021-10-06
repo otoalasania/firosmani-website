@@ -424,8 +424,9 @@ nav{
     .photos{
         width: 100%;
         padding: 1em 3em;
+        background: red;
         .content{
-            display: none;
+            display: block;
             img{
                 max-width: 18em;
                 margin: 1em;
@@ -438,6 +439,9 @@ nav{
                         transform: none;
                     }
                 }
+            }
+            .content-1 img{
+                max-width: 40em;
             }
             .content-2 img{
                 max-width: 40em;
