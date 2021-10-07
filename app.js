@@ -9,26 +9,27 @@ navBar.addEventListener('click', () => {
     document.querySelector(".nav-links").classList.toggle("activeNav");
 });
 
+/////////////
+var tabs = document.querySelectorAll(".tabs ul li");
+var tab_wraps = document.querySelectorAll(".tab_wrap");
 
-const tabBtn = document.querySelectorAll(".type");
-const about = document.querySelector(".photoTypes");
-const content = document.querySelectorAll(".content");
+tabs.forEach(function (tab, tab_index) {
+    tab.addEventListener("click", function () {
+        tabs.forEach(function (tab) {
+            tab.classList.remove("active");
+        })
+        tab.classList.add("active");
 
-about.addEventListener("click", function (e) {
-    //console.log(e.target.dataset.id);
-    const id = e.target.dataset.id;
-    if (id) {
-        tabBtn.forEach(function (btn) {
-            btn.classList.remove("active");
+        tab_wraps.forEach(function (content, content_index) {
+            if (content_index == tab_index) {
+                content.style.display = "block";
+            }
+            else {
+                content.style.display = "none";
+            }
+        })
 
-        });
-        e.target.classList.add("active");
-        content.forEach(function (cont) {
-            cont.classList.remove("active")
-        });
-        const element = document.getElementById(id);
-        element.classList.add("active");
-    }
-});
+    })
+})
 
 
