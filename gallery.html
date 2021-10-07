@@ -28,61 +28,57 @@
     <div class="galleryHeader">
         <h2>Art Gallery</h2>
     </div>
-    <div class="about">
-        <div class="photoTypes">
-            <div class="type-1 type active" data-id="firstTab">
-                <p>Persons</p>
-                <div class="underType"></div>
-            </div>
-            <div class="type-2 type" data-id="secondTab">
-                <p>Landscape</p>
-                <div class="underType"></div>
-            </div>
-            <div class="type-3 type" data-id="thirdTab">
-                <p>Situations</p>
-                <div class="underType"></div>
-            </div>
-            <div class="type-4 type" data-id="forthTab">
-                <p>Niko</p>
-                <div class="underType"></div>
-            </div>
-        </div>
-        <div class="photos">
-            <div class="content content-1 active" id="firstTab">
-                <img class="zoom" src="./images/iremii.webp" alt="img">
-                <img class="zoom" src="./images/metevze.webp" alt="img">
-                <img class="zoom" src="./images/qali.webp" alt="img">
-                <img class="zoom" src="./images/qali2.webp" alt="img">
-                <img class="zoom" src="./images/qali3.webp" alt="img">
-                <img class="zoom" src="./images/girrafee.webp" alt="img">
-                <img class="zoom" src="./images/bavshvi.webp" alt="img">
-            </div>
-            <div class="content content-2 " id="secondTab">
-                <img class="zoom" src="./images/pirosmani_10.webp" alt="img">
-                <img class="zoom" src="./images/pirosmani_36.webp" alt="img">
-                <img class="zoom" src="./images/pirosmani_45.webp" alt="img">
-                <img class="zoom" src="./images/pirosmani_32.webp" alt="img">
-            </div>
-            <div class="content content-3 " id="thirdTab">
-                <img class="zoom" src="./images/saojaxo_lxini.webp" alt="img">
-                <img class="zoom" src="./images/rtveli.webp" alt="img">
-                <img class="zoom" src="./images/agdgoma.webp" alt="img">
-                <img class="zoom" src="./images/shveli.webp" alt="img">
-                <img class="zoom" src="./images/aqlemi.webp" alt="img">
-            </div>
-            <div class="content content-4" id="forthTab">
-                <img class="zoom" src="./images/niko-1.webp" alt="img">
-                <img class="zoom" src="./images/niko-2.webp" alt="img">
-                <img class="zoom" src="./images/niko-3.webp" alt="img">
-                <img class="zoom" src="./images/niko-4.webp" alt="img">
-                <img class="zoom" src="./images/niko-5.webp" alt="img">
-            </div>
-        </div>
-    </div>
 
 
-    <script src="./medium-zoom.min.js"></script>
-    <script src="./app.js"></script>
+    <div class="wrapper">
+        <div class="tabs">
+            <ul>
+                <li class="active">
+                    <span class="text">Person</span>
+                </li>
+                <li>
+                    <span class="text">Landscape</span>
+                </li>
+                <li>
+                    <span class="text">Situation</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="tab_wrap" style="display: block;">
+                <div class="tab_content person">
+                    <img class="zoom" src="./images/iremii.webp" alt="img">
+                    <img class="zoom" src="./images/metevze.webp" alt="img">
+                    <img class="zoom" src="./images/qali.webp" alt="img">
+                    <img class="zoom" src="./images/qali2.webp" alt="img">
+                    <img class="zoom" src="./images/qali3.webp" alt="img">
+                    <img class="zoom" src="./images/girrafee.webp" alt="img">
+                    <img class="zoom" src="./images/bavshvi.webp" alt="img">
+                </div>
+            </div>
+            <div class="tab_wrap" style="display: none;">
+                <div class="tab_content landscape">
+                    <img class="zoom" src="./images/pirosmani_10.webp" alt="img">
+                    <img class="zoom" src="./images/pirosmani_36.webp" alt="img">
+                    <img class="zoom" src="./images/pirosmani_45.webp" alt="img">
+                    <img class="zoom" src="./images/pirosmani_32.webp" alt="img">
+
+                </div>
+            </div>
+            <div class="tab_wrap" style="display: none;">
+                <div class="tab_content situation">
+                    <img class="zoom" src="./images/saojaxo_lxini.webp" alt="img">
+                    <img class="zoom" src="./images/rtveli.webp" alt="img">
+                    <img class="zoom" src="./images/agdgoma.webp" alt="img">
+                    <img class="zoom" src="./images/shveli.webp" alt="img">
+                    <img class="zoom" src="./images/aqlemi.webp" alt="img">
+                </div>
+            </div>
+        </div>
+
+        <script src="./medium-zoom.min.js"></script>
+        <script src="./app.js" defer="defer"></script>
 </body>
 
 </html>
