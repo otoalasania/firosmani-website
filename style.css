@@ -192,7 +192,6 @@ nav p {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  padding: 0 0 0 3em;
 }
 
 @media screen and (max-width: 768px) {
@@ -203,7 +202,6 @@ nav p {
             flex-direction: column;
     padding-top: 2em;
     height: auto;
-    padding: 0;
   }
 }
 
@@ -223,9 +221,15 @@ nav p {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .section1 .mainPerson {
+    margin-left: -0.5em;
+  }
+}
+
 .section1 .mainPerson .name {
   width: 15em;
-  height: 13em;
+  height: 8em;
   z-index: -1;
 }
 
@@ -263,15 +267,15 @@ nav p {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .section1 .mainPerson .name h1 {
-    font-size: 3.2rem;
-  }
-}
-
 @media screen and (max-width: 1300px) {
   .section1 .mainPerson .name h1 {
     font-size: 3.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section1 .mainPerson .name h1 {
+    font-size: 3.2rem;
   }
 }
 
@@ -509,13 +513,13 @@ nav p {
 
 @-webkit-keyframes heart {
   0% {
-    left: 300%;
+    left: -300%;
   }
 }
 
 @keyframes heart {
   0% {
-    left: 300%;
+    left: -300%;
   }
 }
 
@@ -591,7 +595,7 @@ nav p {
 .section1 .right {
   width: 40%;
   height: 100%;
-  background: black;
+  background: gray;
   padding: 0.5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -613,6 +617,29 @@ nav p {
   }
 }
 
+.section1 .right .try {
+  width: 85%;
+  background: #1b1b1b;
+  height: 8em;
+  margin: 1em 0;
+}
+
+.section1 .right :nth-child(odd) {
+  margin-left: -1em;
+}
+
+.section1 .right :nth-child(1) {
+  margin-left: 2em;
+}
+
+.section1 .right :nth-child(3) {
+  margin-left: 2em;
+}
+
+.section1 .right :nth-child(5) {
+  margin-left: 1em;
+}
+
 .section2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -625,7 +652,6 @@ nav p {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background: antiquewhite;
   position: relative;
 }
 
@@ -658,12 +684,6 @@ nav p {
 @media screen and (max-width: 800px) {
   .section2 .text h1 {
     font-size: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 668px) {
-  .section2 .text h1 {
-    font-size: 2rem;
   }
 }
 
