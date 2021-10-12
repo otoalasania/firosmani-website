@@ -1,6 +1,11 @@
+
+window.onload = function () {
+
+}
 mediumZoom('.zoom', {
     margin: 50
 });
+
 
 const navBar = document.getElementById("navBar");
 const closeBtn = document.getElementById("closeBtn");
@@ -8,6 +13,17 @@ const closeBtn = document.getElementById("closeBtn");
 navBar.addEventListener('click', () => {
     document.querySelector(".nav-links").classList.toggle("activeNav");
 });
+
+/////
+
+const bookBtn = document.querySelector(".bookBtn");
+const loginBox = document.querySelector(".loginBox");
+
+bookBtn.addEventListener("click", () => {
+    loginBox.classList.add("loginActive");
+});
+
+
 
 /////////////
 var tabs = document.querySelectorAll(".tabs ul li");
@@ -26,21 +42,6 @@ tabs.forEach(function (tab, tab_index) {
                 content.style.display = "none";
             }
         });;
-    });
-});
-
-///scroll
-
-const upButton = document.querySelector(".scrollTop");
-
-window.addEventListener("scroll", () => {
-    upButton.classList.toggle("activeUp", window.scrollY > 400);
-});
-
-upButton.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
     });
 });
 
@@ -64,4 +65,20 @@ function reveal() {
         }
     }
 }
+
+
+///scroll
+const upButton = document.querySelector(".scrollTop");
+
+window.addEventListener("scroll", () => {
+    upButton.classList.toggle("activeUp", window.scrollY > 400);
+});
+
+upButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 
