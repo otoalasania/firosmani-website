@@ -1,7 +1,4 @@
 
-window.onload = function () {
-
-}
 mediumZoom('.zoom', {
     margin: 50
 });
@@ -15,13 +12,6 @@ navBar.addEventListener('click', () => {
 });
 
 /////
-
-const bookBtn = document.querySelector(".bookBtn");
-const loginBox = document.querySelector(".loginBox");
-
-bookBtn.addEventListener("click", () => {
-    loginBox.classList.add("loginActive");
-});
 
 
 
@@ -80,5 +70,16 @@ upButton.addEventListener("click", () => {
         behavior: 'smooth'
     });
 });
+
+
+
+
+const bookBtn = document.querySelector(".bookBtn");
+const loginBox = document.querySelector(".loginBox");
+
+bookBtn.addEventListener("click", () => {
+    loginBox.classList.add("loginActive");
+});
+
 
 
