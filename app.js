@@ -12,12 +12,12 @@ navBar.addEventListener('click', () => {
 });
 
 /////
-const bookBtn = document.querySelector("#bookBtn");
-const loginBox = document.querySelector(".loginBox");
+//const bookBtn = document.querySelector("#bookBtn");
+//const loginBox = document.querySelector(".loginBox");
 
-bookBtn.addEventListener("click", () => {
-    loginBox.classList.add("loginActive");
-});
+//bookBtn.addEventListener("click", () => {
+//loginBox.classList.add("loginActive");
+//});
 
 
 
