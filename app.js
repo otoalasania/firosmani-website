@@ -3,30 +3,47 @@ mediumZoom('.zoom', {
     margin: 50
 });
 
+///scroll
+/*const upButton = document.querySelector(".scrollTop");
+
+window.addEventListener("scroll", function () {
+    upButton.classList.toggle("activeUp", window.scrollY > 400);
+});
+
+upButton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});*/
+
 
 const navBar = document.getElementById("navBar");
 const closeBtn = document.getElementById("closeBtn");
 
-navBar.addEventListener('click', () => {
+navBar.addEventListener('click', function () {
     document.querySelector(".nav-links").classList.toggle("activeNav");
 });
 
+
+
 /////
-//const bookBtn = document.querySelector("#bookBtn");
-//const loginBox = document.querySelector(".loginBox");
+function openLogin() {
+    const loginPop = document.getElementById("loginBox");
+    loginPop.style.display = "flex";
+}
 
-//bookBtn.addEventListener("click", () => {
-//loginBox.classList.add("loginActive");
-//});
-
-
+function closeLogin() {
+    const loginPop = document.getElementById("loginBox");
+    loginPop.style.display = "none";
+}
 
 /////////////
 var tabs = document.querySelectorAll(".tabs ul li");
 var tab_wraps = document.querySelectorAll(".tab_wrap");
 
 tabs.forEach(function (tab, tab_index) {
-    tab.addEventListener("click", function () {
+    tab.addEventListener('click', function () {
         tabs.forEach(function (tab) {
             tab.classList.remove("active");
         });
@@ -43,7 +60,7 @@ tabs.forEach(function (tab, tab_index) {
 
 
 ///animate effect
-window.addEventListener("scroll", reveal);
+window.addEventListener('scroll', reveal);
 
 function reveal() {
     const reveals = document.querySelectorAll('.reveal');
@@ -62,20 +79,6 @@ function reveal() {
     }
 }
 
-
-///scroll
-const upButton = document.querySelector(".scrollTop");
-
-window.addEventListener("scroll", () => {
-    upButton.classList.toggle("activeUp", window.scrollY > 400);
-});
-
-upButton.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
 
 
 

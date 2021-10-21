@@ -71,6 +71,8 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 nav .navbar {
@@ -239,6 +241,8 @@ nav p {
   height: calc(100vh - 3em);
   overflow: hidden;
   position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 @media screen and (max-width: 768px) {
@@ -685,12 +689,48 @@ nav p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: .5em 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .section1 .right .box {
+    height: 70%;
+  }
+}
+
+.section1 .right .box ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: .5em;
+  background: #333;
+}
+
+.section1 .right .box p {
+  text-align: center;
+  margin: 2em 0 0 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .section1 .right .box p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section1 .right .box p {
+    font-size: .9rem;
+    margin: 0 0 1em 0;
+  }
 }
 
 .section1 .right .box button {
@@ -709,16 +749,232 @@ nav p {
   background: #080808;
 }
 
-.section1 .loginBox {
+.section1 #loginBox {
+  display: none;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.726);
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  top: 0;
+}
+
+.section1 #LBox {
   position: absolute;
-  width: 80%;
-  height: 80vh;
-  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  width: 50%;
+  height: 50vh;
+  background: #f0f0f0;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .section1 #LBox {
+    width: 80%;
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section1 #LBox {
+    width: 90%;
+    height: 70vh;
+  }
+}
+
+.section1 #LBox i {
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute;
+  top: .5em;
+  right: .8em;
+}
+
+.section1 #LBox p {
+  font-size: 0.8em;
+}
+
+.section1 #LBox .topInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.section1 #LBox .topInput > div {
+  margin: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+  .section1 #LBox .topInput > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0;
+  }
+}
+
+.section1 #LBox .topInput > div > input {
+  padding: .7em 1em;
+  margin: 0 1em;
+  border-radius: 20px;
+  border: none;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+@media screen and (max-width: 550px) {
+  .section1 #LBox .topInput > div > input {
+    margin: 0em 0em;
+  }
+}
+
+.section1 #LBox .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section1 #LBox .wrapper label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  border: 1px solid #686868;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+  padding: .3em .8em;
+  margin: 1em .7em;
+}
+
+@media screen and (max-width: 550px) {
+  .section1 #LBox .wrapper label {
+    font-size: 13px;
+    margin: 1em .1em;
+  }
+}
+
+.section1 #LBox .wrapper label .dot {
+  height: 18px;
+  width: 18px;
+  background: #cacaca;
+  border-radius: 50%;
+  position: relative;
+}
+
+.section1 #LBox .wrapper label .dot::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(2);
+          transform: translate(-50%, -50%) scale(2);
+  width: 8px;
+  height: 8px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border-radius: 50%;
+}
+
+.section1 #LBox .wrapper label .text {
+  font-size: 18px;
+  padding-left: 10px;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+@media screen and (max-width: 550px) {
+  .section1 #LBox .wrapper label .text {
+    font-size: 13px;
+  }
+}
+
+.section1 #LBox .wrapper #option-1:checked ~ .option-1 .dot::before,
+.section1 #LBox .wrapper #option-2:checked ~ .option-2 .dot::before,
+.section1 #LBox .wrapper #option-3:checked ~ .option-3 .dot::before {
+  background: #333;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.section1 #LBox .wrapper #option-1:checked ~ .option-1,
+.section1 #LBox .wrapper #option-2:checked ~ .option-2,
+.section1 #LBox .wrapper #option-3:checked ~ .option-3 {
+  background: #333;
+  border-color: #333;
+}
+
+.section1 #LBox .wrapper #option-1:checked ~ .option-1 .text,
+.section1 #LBox .wrapper #option-2:checked ~ .option-2 .text,
+.section1 #LBox .wrapper #option-3:checked ~ .option-3 .text {
+  color: #fff;
+}
+
+.section1 #LBox .wrapper .radio {
   display: none;
 }
 
-.section1 .loginActive {
-  display: block;
+.section1 #LBox .sendInfo {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: .4em 1.4em;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.section1 #LBox .sendInfo:active {
+  background: #4d4d4d;
 }
 
 .section2 {

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a283e4476d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -53,10 +54,47 @@
         </div>
         <div class="right">
             <div class="box">
-                <button id="bookBtn">Book Now</button>
+                <p>Visit Niko Pirosmanishvili International Exhibition in Tbilisi</p>
+                <button onclick="openLogin()">Book Now</button>
             </div>
         </div>
-        <div class="loginBox"></div>
+        <div id="loginBox">
+            <div id="LBox">
+                <i onclick="closeLogin()" class="fas fa-times"></i>
+                <div class="topInput">
+                    <div class="fullName">
+                        <label for="fname">Fullname: </label><br>
+                        <input type="text" id="fname" name="fname" placeholder="John Smith"><br>
+                    </div>
+                    <div class="mobileNumber">
+                        <label for="phone">Phone Number: </label>
+                        <input type="tel" id="phone" name="phone" placeholder="555 55 55 55">
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <input type="radio" name="select" id="option-1" class="radio">
+                    <input type="radio" name="select" id="option-2" class="radio">
+                    <input type="radio" name="select" id="option-3" class="radio">
+                    <input type="radio" name="select" id="option-4" class="radio">
+                    <label for="option-1" class="option-1">
+                        <div class="dot"></div>
+                        <div class="text">11:00 AM</div>
+                    </label>
+                    <label for="option-2" class="option-2">
+                        <div class="dot"></div>
+                        <div class="text">05:00 PM</div>
+                    </label>
+                    <label for="option-3" class="option-3">
+                        <div class="dot"></div>
+                        <div class="text">09:00 PM</div>
+                    </label>
+                </div>
+                <p>We will contact you in a few minutes</p>
+                <button onclick="closeLogin()" class="sendInfo">Send</button>
+            </div>
+        </div>
+
     </section>
 
 
