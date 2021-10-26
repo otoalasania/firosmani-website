@@ -862,7 +862,7 @@ nav{
         overflow: hidden;
         width: 185px;
         height: 274px;
-        border: 1px solid #000;
+        border: 1px solid rgba(0, 0, 0, 0.247);
         background: rgb(197, 197, 197);
         @media screen and (max-width:460px){
             width: 140px;
@@ -920,7 +920,7 @@ nav{
         right: 0;
         bottom: -40%;
         width: 40%;
-        border: 1px solid #000;
+        border: 1px solid rgba(0, 0, 0, 0.247);
     }
 }
 
